@@ -20,11 +20,6 @@ export BUILD_HOST=nfs-projects
 git config --global user.email "jarbull86@gmail.com"
 git config --global user.name "AnGgIt86"
 
-echo "Downloading few Dependecies . . ."
-# Kernel Sources
-git clone --depth=1 $KERNEL_SOURCE -b $KERNEL_BRANCH $DEVICE_CODENAME
-git clone --depth=1 https://github.com/mvaisakh/gcc-arm64 GCC # xRageTC set as GCC Default
-
 # Main Declaration
 KERNEL_ROOTDIR=$(pwd)/$DEVICE_CODENAME # IMPORTANT ! Fill with your kernel source root directory.
 DEVICE_DEFCONFIG=$DEVICE_DEFCONFIG # IMPORTANT ! Declare your kernel source defconfig file here.
