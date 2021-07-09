@@ -99,6 +99,7 @@ make -j$(nproc) ARCH=arm64 O=out \
 # Push kernel to channel
 function push() {
     cd AnyKernel
+    rm -rf NFS*
     ZIP=$(echo *.zip)
     curl -F document=@$ZIP "https://api.telegram.org/bot$TG_TOKEN/sendDocument" \
         -F chat_id="$TG_CHAT_ID" \
