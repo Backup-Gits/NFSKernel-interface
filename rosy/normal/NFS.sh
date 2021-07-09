@@ -74,7 +74,7 @@ tg_post_msg "<b>NFSKernel-compiler</b>%0ABuilder Name : <code>${KBUILD_BUILD_USE
 
 # Compile
 compile(){
-tg_post_msg "<b>NFSKernel-compiler:</b><code>Compilation has started</code>"
+tg_post_msg "<b>NFSKernel-compiler:</b><code>Membangun Kernel sedang di muali, Sabar ya sayank. Gak lama kok..</code>"
 cd ${KERNEL_ROOTDIR}
 make -j$(nproc) O=out ARCH=arm64 ${DEVICE_DEFCONFIG}
 make -j$(nproc) ARCH=arm64 O=out \
@@ -99,6 +99,7 @@ make -j$(nproc) ARCH=arm64 O=out \
 # Push kernel to channel
 function push() {
     cd AnyKernel
+    rm -rf NFS*
     ZIP=$(echo *.zip)
     curl -F document=@$ZIP "https://api.telegram.org/bot$TG_TOKEN/sendDocument" \
         -F chat_id="$TG_CHAT_ID" \
