@@ -20,6 +20,16 @@ export BUILD_HOST=nfs-projects
 git config --global user.email "jarbull86@gmail.com"
 git config --global user.name "AnGgIt86"
 
+# Telegram
+export BOT_MSG_URL="https://api.telegram.org/bot$TG_TOKEN/sendMessage"
+
+tg_post_msg() {
+  curl -s -X POST "$BOT_MSG_URL" -d chat_id="$TG_CHAT_ID" \
+  -d "disable_web_page_preview=true" \
+  -d "parse_mode=html" \
+  -d text="$1"
+
+}
 echo "Downloading few Dependecies . . ."
 # Kernel Sources
 git clone --depth=1 $KERNEL_SOURCE -b $KERNEL_BRANCH $DEVICE_CODENAME
