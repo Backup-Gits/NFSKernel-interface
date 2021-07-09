@@ -55,4 +55,4 @@ bash rm.sh
 tg_post_msg "<b>NFSKernel-compiler:</b><code>Started build witch Proton Clang</code>"
 echo "started build witch Proton Clang"
 bash Proton.sh
-tg_post_msg "<b>NFSKernel-compiler:</b><code>Aku capek sayank, semuanya sudah selesai. Aku tidur dulu ya..  Bay bay 😘😘</code>"
+tg_post_msg "<b>NFSKernel-compiler:</b><code>Aku capek sayank, semuanya sudah selesai. Aku istirahat dulu ya..  Bay bay 😘😘</code>"
