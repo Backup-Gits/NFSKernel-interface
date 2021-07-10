@@ -3,8 +3,6 @@
 # Copyright (C) 2021 a xyzprjkt property
 #
 
-export USE_CCACHE=1
-export CCACHE_DIR="$HOME/.ccache"
 export LOCALVERSION=-OldCAM
 export TZ=Asia/Jakarta
 export KERNEL_NAME=NFS-Kernel
