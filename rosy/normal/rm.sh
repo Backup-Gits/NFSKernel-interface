@@ -27,3 +27,4 @@ export KBUILD_BUILD_HOST=$BUILD_HOST # Change with your own hostname.
 
 cd ${KERNEL_ROOTDIR}
 make O=out clean && make O=out mrproper
+rm -rf AnyKernel
