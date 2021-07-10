@@ -37,10 +37,10 @@ git clone --depth=1 https://github.com/mvaisakh/gcc-arm64 GCC
 git clone --depth=1 https://github.com/AnGgIt86/NFS-TC.git NFS-Toolchain
 git clone --depth=1 https://github.com/kdrag0n/proton-clang Proton
 
-curl https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/rosy/normal/GCC.sh -o GCC.sh
-curl https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/rosy/normal/NFS.sh -o NFS.sh
-curl https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/rosy/normal/Proton.sh -o Proton.sh
-curl https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/rosy/normal/rm.sh -o rm.sh
+curl https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/tulip/oldcam/GCC.sh -o GCC.sh
+curl https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/tulip/oldcam/NFS.sh -o NFS.sh
+curl https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/tulip/oldcam/Proton.sh -o Proton.sh
+curl https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/tulip/oldcam/rm.sh -o rm.sh
 
 tg_post_msg "<b>NFSKernel-compiler:</b><code>Started build witch GCC</code>"
 echo "Started build witch GCC"
