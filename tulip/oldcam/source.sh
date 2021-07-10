@@ -3,6 +3,8 @@
 # Copyright (C) 2021 a xyzprjkt property
 #
 
+export ARCH=arm64
+export SUBARCH=arm64
 export LOCALVERSION=-OldCAM
 export TZ=Asia/Jakarta
 export KERNEL_NAME=NFS-Kernel
@@ -17,6 +19,20 @@ export BUILD_USER=xiaomi
 export BUILD_HOST=nfs-projects
 git config --global user.email "jarbull86@gmail.com"
 git config --global user.name "AnGgIt86"
+# AGNi CCACHE SHIFTING TO SDM660
+export CCACHE_SDM660="1"
+export CCACHE_MIATOLL_Q="0"
+export CCACHE_MIATOLL_R="0"
+. ~/WORKING_DIRECTORY/ccache_shifter.sh
+
+exit_reset() {
+	export CCACHE_SDM660="0"
+	export CCACHE_MIATOLL_Q="0"
+	export CCACHE_MIATOLL_R="0"
+	. ~/WORKING_DIRECTORY/ccache_shifter.sh
+	sync
+	exit
+
 
 # Telegram
 export BOT_MSG_URL="https://api.telegram.org/bot$TG_TOKEN/sendMessage"
