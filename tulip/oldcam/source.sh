@@ -37,10 +37,10 @@ git clone --depth=1 https://github.com/mvaisakh/gcc-arm64 GCC
 git clone --depth=1 https://github.com/AnGgIt86/NFS-TC.git NFS-Toolchain
 git clone --depth=1 https://github.com/kdrag0n/proton-clang Proton
 
-curl https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/vince/GCC.sh -o GCC.sh
-curl https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/vince/NFS.sh -o NFS.sh
-curl https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/vince/Proton.sh -o Proton.sh
-curl https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/vince/rm.sh -o rm.sh
+curl https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/tulip/oldcam/GCC.sh -o GCC.sh
+curl https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/tulip/oldcam/NFS.sh -o NFS.sh
+curl https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/tulip/oldcam/Proton.sh -o Proton.sh
+curl https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/tulip/oldcam/rm.sh -o rm.sh
 
 tg_post_msg "<b>NFSKernel-Redmi Note 6 Pro (tulip):</b><code>Started build witch GCC</code>"
 echo "Started build witch GCC"
