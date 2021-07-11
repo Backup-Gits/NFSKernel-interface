@@ -42,17 +42,17 @@ curl https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/rosy/no
 curl https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/rosy/normal/Proton.sh -o Proton.sh
 curl https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/rosy/normal/rm.sh -o rm.sh
 
-tg_post_msg "<b>NFSKernel-compiler:</b><code>Started build witch GCC</code>"
+tg_post_msg "<b>NFSKernel-normal-(rosy):</b><code>Started build witch GCC</code>"
 echo "Started build witch GCC"
 bash GCC.sh
 echo "membersihkan config sebelumnya"
 bash rm.sh
-tg_post_msg "<b>NFSKernel-compiler:</b><code>Started build witch NFS Clang</code>"
+tg_post_msg "<b>NFSKernel-normal-(rosy):</b><code>Started build witch NFS Clang</code>"
 echo "started build witch NFS Clang"
 bash NFS.sh
 echo "membersihkan config sebelumnya"
 bash rm.sh
-tg_post_msg "<b>NFSKernel-compiler:</b><code>Started build witch Proton Clang</code>"
+tg_post_msg "<b>NFSKernel-normal-(rosy):</b><code>Started build witch Proton Clang</code>"
 echo "started build witch Proton Clang"
 bash Proton.sh
-tg_post_msg "<b>NFSKernel-compiler:</b><code>Aku capek sayank, semuanya sudah selesai. Aku istirahat dulu ya..  Bay bay 😘😘</code>"
+tg_post_msg "<b>NFSKernel-normal-(rosy):</b><code>Aku capek sayank, semuanya sudah selesai. Aku istirahat dulu ya..  Bay bay 😘😘</code>"
