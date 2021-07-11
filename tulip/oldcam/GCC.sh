@@ -6,6 +6,7 @@
 export USE_CCACHE=1
 export CCACHE_DIR="$HOME/.ccache"
 export LOCALVERSION=-OldCam
+export COMPAT_VDSO=n
 export TZ=Asia/Jakarta
 export KERNEL_NAME=NFS-Kernel-4.4-OldCam
 export KERNEL_SOURCE=https://github.com/AnGgIt86/kernel-sdm660.git
