@@ -17,6 +17,8 @@ export TG_TOKEN=1852697615:AAGKDF9cYNnTY4Ylm7XjBrsssS31eTtqYfk
 export TG_CHAT_ID=-1001580307414
 export BUILD_USER=xiaomi
 export BUILD_HOST=nfs-projects
+export BOT_MSG_URL="https://api.telegram.org/bot$TG_TOKEN/sendMessage"
+export BOT_MSG_URL2="https://api.telegram.org/bot$TG_TOKEN"
 git config --global user.email "jarbull86@gmail.com"
 git config --global user.name "AnGgIt86"
 
@@ -74,7 +76,7 @@ tg_post_msg "<b>NFSKernel-Android-Q-R-(rosy)</b>%0ABuilder Name : <code>${KBUILD
 
 # Compile
 compile(){
-tg_post_msg "<b>NFSKernel-Android-Q-R-(rosy):</b><code>Membangun Kernel sedang di muali, Sabar ya sayank. Gak lama kok..</code>"
+tg_post_msg "<b>NFSKernel-Android-Q-R-(rosy):</b><code>Membangun Kernel sedang di mulai, Sabar ya bro. Gak lama kok..</code>"
 cd ${KERNEL_ROOTDIR}
 make -j$(nproc) O=out ARCH=arm64 ${DEVICE_DEFCONFIG}
 make -j$(nproc) ARCH=arm64 O=out \
