@@ -17,11 +17,10 @@ export TG_TOKEN=1852697615:AAGKDF9cYNnTY4Ylm7XjBrsssS31eTtqYfk
 export TG_CHAT_ID=-1001580307414
 export BUILD_USER=xiaomi
 export BUILD_HOST=nfs-projects
+export BOT_MSG_URL="https://api.telegram.org/bot$TG_TOKEN/sendMessage"
+export BOT_MSG_URL2="https://api.telegram.org/bot$TG_TOKEN"
 git config --global user.email "jarbull86@gmail.com"
 git config --global user.name "AnGgIt86"
-
-# Telegram
-export BOT_MSG_URL="https://api.telegram.org/bot$TG_TOKEN/sendMessage"
 
 tg_post_msg() {
   curl -s -X POST "$BOT_MSG_URL" -d chat_id="$TG_CHAT_ID" \
