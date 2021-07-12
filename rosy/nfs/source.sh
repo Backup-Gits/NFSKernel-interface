@@ -41,9 +41,9 @@ curl https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/rosy/nf
 curl https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/rosy/nfs/Proton.sh -o Proton.sh
 curl https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/rosy/nfs/rm.sh -o rm.sh
 
-curl -s -X POST "$BOT_MSG_URL/sendSticker" \
-        -d sticker="CAACAgUAAx0CXjGT1gACAeRg69dV3PYH_z8EZQnV9D9MubhVCwAClAAD7OCaHulbTgv4Q5nsIAQ" \
-        -d chat_id="$TG_CHAT_ID"
+curl -s -X POST "$BOT_MSG_URL2/sendSticker" \
+-d sticker="CAACAgUAAx0CXjGT1gACAeRg69dV3PYH_z8EZQnV9D9MubhVCwAClAAD7OCaHulbTgv4Q5nsIAQ" \
+-d chat_id="$TG_CHAT_ID"
         
 tg_post_msg "<b>NFSKernel-Android-Q-R-(rosy):</b><code>Started build witch GCC</code>"
 echo "Started build witch GCC"
@@ -59,6 +59,6 @@ tg_post_msg "<b>NFSKernel-Android-Q-R-(rosy):</b><code>Started build witch Proto
 echo "started build witch Proton Clang"
 bash Proton.sh
 tg_post_msg "<b>NFSKernel-Android-Q-R-(rosy):</b><code>Building completed...</code>"
-curl -s -X POST "$BOT_MSG_URL/sendSticker" \
-        -d sticker="CAACAgIAAx0CXjGT1gACAeVg69gXIw-a6h1nvmmaub51tQQwCgACLQMAAsbMYwIquW4nbs0crSAE" \
-        -d chat_id="$TG_CHAT_ID"
+curl -s -X POST "$BOT_MSG_URL2/sendSticker" \
+-d sticker="CAACAgIAAx0CXjGT1gACAeVg69gXIw-a6h1nvmmaub51tQQwCgACLQMAAsbMYwIquW4nbs0crSAE" \
+-d chat_id="$TG_CHAT_ID"
