@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
-#
-# Copyright (C) 2021 a xyzprjkt property
-#
 
 export USE_CCACHE=1
 export CCACHE_DIR="$HOME/.ccache"

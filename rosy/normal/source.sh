@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
-#
-# Copyright (C) 2021 a xyzprjkt property
-#
 
 export USE_CCACHE=1
 export CCACHE_DIR="$HOME/.ccache"
@@ -17,11 +14,10 @@ export TG_TOKEN=1852697615:AAGKDF9cYNnTY4Ylm7XjBrsssS31eTtqYfk
 export TG_CHAT_ID=-1001580307414
 export BUILD_USER=xiaomi
 export BUILD_HOST=nfs-projects
+export BOT_MSG_URL="https://api.telegram.org/bot$TG_TOKEN/sendMessage"
+export BOT_MSG_URL2="https://api.telegram.org/bot$TG_TOKEN"
 git config --global user.email "jarbull86@gmail.com"
 git config --global user.name "AnGgIt86"
-
-# Telegram
-export BOT_MSG_URL="https://api.telegram.org/bot$TG_TOKEN/sendMessage"
 
 tg_post_msg() {
   curl -s -X POST "$BOT_MSG_URL" -d chat_id="$TG_CHAT_ID" \
@@ -42,6 +38,10 @@ curl https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/rosy/no
 curl https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/rosy/normal/Proton.sh -o Proton.sh
 curl https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/rosy/normal/rm.sh -o rm.sh
 
+curl -s -X POST "$BOT_MSG_URL2/sendSticker" \
+-d sticker="CAACAgUAAx0CXjGT1gACAeRg69dV3PYH_z8EZQnV9D9MubhVCwAClAAD7OCaHulbTgv4Q5nsIAQ" \
+-d chat_id="$TG_CHAT_ID"
+        
 tg_post_msg "<b>NFSKernel-normal-(rosy):</b><code>Started build witch GCC</code>"
 echo "Started build witch GCC"
 bash GCC.sh
@@ -55,4 +55,7 @@ bash rm.sh
 tg_post_msg "<b>NFSKernel-normal-(rosy):</b><code>Started build witch Proton Clang</code>"
 echo "started build witch Proton Clang"
 bash Proton.sh
-tg_post_msg "<b>NFSKernel-normal-(rosy):</b><code>Aku capek sayank, semuanya sudah selesai. Aku istirahat dulu ya..  Bay bay 😘😘</code>"
+tg_post_msg "<b>NFSKernel-Android-Q-R-(rosy):</b><code>Building completed...</code>"
+curl -s -X POST "$BOT_MSG_URL2/sendSticker" \
+-d sticker="CAACAgIAAx0CXjGT1gACAeVg69gXIw-a6h1nvmmaub51tQQwCgACLQMAAsbMYwIquW4nbs0crSAE" \
+-d chat_id="$TG_CHAT_ID"
