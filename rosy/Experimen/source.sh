@@ -31,7 +31,7 @@ echo "Downloading few Dependecies . . ."
 git clone --depth=1 $KERNEL_SOURCE -b $KERNEL_BRANCH $DEVICE_CODENAME
 git clone --depth=1 https://github.com/AnGgIt86/NFS-TC.git NFS-Toolchain
 
-curl https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/rosy/Experiment/NFS.sh -o NFS.sh
+curl https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/rosy/Experimen/NFS.sh -o NFS.sh
 
 curl -s -X POST "$BOT_MSG_URL2/sendSticker" \
 -d sticker="CAACAgUAAx0CXjGT1gACAeRg69dV3PYH_z8EZQnV9D9MubhVCwAClAAD7OCaHulbTgv4Q5nsIAQ" \
