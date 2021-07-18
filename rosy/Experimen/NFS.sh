@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+export CONFIG_CPU_BOOST=y
+export CONFIG_CPU_FREQ_GOV_ONDEMAND=y
+export CONFIG_CPU_FREQ_GOV_CONSERVATIVE=y
+export CONFIG_ARM_BIG_LITTLE_CPUFREQ=y
+export CONFIG_ANDROID_LOW_MEMORY_KILLER=y
 
 # Main Declaration
 KERNEL_ROOTDIR=$(pwd)/$DEVICE_CODENAME # IMPORTANT ! Fill with your kernel source root directory.
