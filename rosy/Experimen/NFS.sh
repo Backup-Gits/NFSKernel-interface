@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-export CONFIG_LTO=y
-export CONFIG_LTO_CLANG=y
 
 # Main Declaration
 KERNEL_ROOTDIR=$(pwd)/$DEVICE_CODENAME # IMPORTANT ! Fill with your kernel source root directory.

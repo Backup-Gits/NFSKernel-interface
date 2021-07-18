@@ -41,7 +41,3 @@ tg_post_msg "<b>NFSKernel-Experiment-(rosy):</b><code>Started build witch GCC</c
 tg_post_msg "<b>NFSKernel-Experiment-(rosy):</b><code>Started build witch NFS Clang</code>"
 echo "started build witch NFS Clang"
 bash NFS.sh
-tg_post_msg "<b>NFSKernel-Experiment-(rosy):</b><code>Building completed...</code>"
-curl -s -X POST "$BOT_MSG_URL2/sendSticker" \
--d sticker="CAACAgIAAx0CXjGT1gACAeVg69gXIw-a6h1nvmmaub51tQQwCgACLQMAAsbMYwIquW4nbs0crSAE" \
--d chat_id="$TG_CHAT_ID"
