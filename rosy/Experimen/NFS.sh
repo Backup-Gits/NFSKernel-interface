@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-export CONFIG_CPU_BOOST=y
-export CONFIG_CPU_FREQ_GOV_ONDEMAND=y
-export CONFIG_CPU_FREQ_GOV_CONSERVATIVE=y
-
 # Main Declaration
 KERNEL_ROOTDIR=$(pwd)/$DEVICE_CODENAME # IMPORTANT ! Fill with your kernel source root directory.
 DEVICE_DEFCONFIG=$DEVICE_DEFCONFIG # IMPORTANT ! Declare your kernel source defconfig file here.
@@ -103,7 +99,7 @@ function finerr() {
 # Zipping
 function zipping() {
     cd AnyKernel || exit 1
-    zip -r9 $KERNEL_NAME-$KERNEL_VERSION-$DEVICE_CODENAME-${DATE}.zip *
+    zip -r9 $KERNEL_NAME-$DEVICE_CODENAME-${DATE}.zip *
     cd ..
 }
 check
