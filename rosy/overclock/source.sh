@@ -30,11 +30,9 @@ echo "Downloading few Dependecies . . ."
 # Kernel Sources
 git clone --depth=1 $KERNEL_SOURCE -b $KERNEL_BRANCH $DEVICE_CODENAME
 git clone --depth=1 https://github.com/mvaisakh/gcc-arm64 GCC
-git clone --depth=1 https://github.com/AnGgIt86/NFS-TC.git NFS-Toolchain
 git clone --depth=1 https://github.com/kdrag0n/proton-clang Proton
 
 curl https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/rosy/overclock/GCC.sh -o GCC.sh
-curl https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/rosy/overclock/NFS.sh -o NFS.sh
 curl https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/rosy/overclock/Proton.sh -o Proton.sh
 curl https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/rosy/overclock/rm.sh -o rm.sh
 
