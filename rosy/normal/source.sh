@@ -47,11 +47,6 @@ echo "Started build witch GCC"
 bash GCC.sh
 echo "membersihkan config sebelumnya"
 bash rm.sh
-tg_post_msg "<b>NFSKernel-normal-(rosy):</b><code>Started build witch NFS Clang</code>"
-echo "started build witch NFS Clang"
-bash NFS.sh
-echo "membersihkan config sebelumnya"
-bash rm.sh
 tg_post_msg "<b>NFSKernel-normal-(rosy):</b><code>Started build witch Proton Clang</code>"
 echo "started build witch Proton Clang"
 bash Proton.sh
