@@ -56,7 +56,6 @@ tg_post_msg "<b>NFSKernel-Experiment-(rosy)</b>%0ABuilder Name : <code>${KBUILD_
 compile(){
 tg_post_msg "<b>NFSKernel-Experiment-(rosy):</b><code>Membangun Kernel sedang di mulai, Sabar ya bro. Gak lama kok..</code>"
 cd ${KERNEL_ROOTDIR}
-export CONFIG_LTO_CLANG=y
 make -j$(nproc) O=out ARCH=arm64 ${DEVICE_DEFCONFIG}
 make -j$(nproc) ARCH=arm64 O=out \
     CC=${CLANG_ROOTDIR}/bin/clang \
