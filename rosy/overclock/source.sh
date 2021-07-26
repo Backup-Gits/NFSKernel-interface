@@ -29,24 +29,34 @@ tg_post_msg() {
 echo "Downloading few Dependecies . . ."
 # Kernel Sources
 git clone --depth=1 $KERNEL_SOURCE -b $KERNEL_BRANCH $DEVICE_CODENAME
-git clone --depth=1 https://github.com/mvaisakh/gcc-arm64 GCC
+git clone --depth=1 https://github.com/AnGgIt86/arm64-gcc GCC
+git clone --depth=1 https://github.com/AnGgIt86/NeedForSpeed-Clang NFS-Toolchain
 git clone --depth=1 https://github.com/kdrag0n/proton-clang Proton
 
-curl https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/rosy/overclock/GCC.sh -o GCC.sh
-curl https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/rosy/overclock/Proton.sh -o Proton.sh
-curl https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/rosy/overclock/rm.sh -o rm.sh
+wget https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/rosy/overclock/GCC.sh
+wget https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/rosy/overclock/NFS.sh
+wget https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/rosy/overclock/Proton.sh
+wget https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/rosy/overclock/rm.sh
 
 curl -s -X POST "$BOT_MSG_URL2/sendSticker" \
 -d sticker="CAACAgUAAx0CXjGT1gACAeRg69dV3PYH_z8EZQnV9D9MubhVCwAClAAD7OCaHulbTgv4Q5nsIAQ" \
 -d chat_id="$TG_CHAT_ID"
         
-tg_post_msg "<b>NFSKernel-overclock-(rosy):</b><code>Started build witch GCC</code>"
-echo "Started build witch GCC"
+tg_post_msg "<b>NFSKernel-overclock-(rosy):</b><code>Started build witch NeedForSpeed GCC</code>"
+echo "Started build witch NeedForSpeed GCC"
+chmod +x GCC.sh
 bash GCC.sh
+echo "membersihkan config sebelumnya"
+bash rm.sh
+tg_post_msg "<b>NFSKernel-overclock-(rosy):</b><code>Started build witch NeedForSpeed Clang</code>"
+echo "Started build witch NeedForSpeed Clang"
+chmod +x NFS.sh
+bash NFS.sh
 echo "membersihkan config sebelumnya"
 bash rm.sh
 tg_post_msg "<b>NFSKernel-overclock-(rosy):</b><code>Started build witch Proton Clang</code>"
 echo "started build witch Proton Clang"
+chmod +x Proton.sh
 bash Proton.sh
 tg_post_msg "<b>NFSKernel-overclock-(rosy):</b><code>Building completed...</code>"
 curl -s -X POST "$BOT_MSG_URL2/sendSticker" \
