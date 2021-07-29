@@ -50,7 +50,7 @@ tg_post_msg "<b>$KERNEL_NAME-(rosy):</b><code>Started build witch NeedForSpeed C
 echo "Started build witch NeedForSpeed Clang"
 chmod +x NFS-clang.sh
 bash NFS-clang.sh
-tg_post_msg "<b>NFSKernel-normal-(rosy):</b><code>Building completed...</code>"
+tg_post_msg "<b>$KERNEL_NAME-(rosy):</b><code>Building completed...</code>"
 curl -s -X POST "$BOT_MSG_URL2/sendSticker" \
 -d sticker="CAACAgIAAx0CXjGT1gACAeVg69gXIw-a6h1nvmmaub51tQQwCgACLQMAAsbMYwIquW4nbs0crSAE" \
 -d chat_id="$TG_CHAT_ID"
