@@ -2,7 +2,6 @@
 
 export USE_CCACHE=1
 export CCACHE_DIR="$HOME/.ccache"
-export LOCALVERSION=
 export TZ=Asia/Jakarta
 export KERNEL_NAME=NFS-Kernel-4.9
 export KERNEL_SOURCE=https://github.com/AnGgIt86/kernel_xiaomi_rosy-4.9.git
@@ -29,35 +28,28 @@ tg_post_msg() {
 echo "Downloading few Dependecies . . ."
 # Kernel Sources
 git clone --depth=1 $KERNEL_SOURCE -b $KERNEL_BRANCH $DEVICE_CODENAME
-git clone --depth=1 https://github.com/AnGgIt86/arm64-gcc GCC
-git clone --depth=1 https://github.com/AnGgIt86/NeedForSpeed-Clang NFS-Toolchain
-git clone --depth=1 https://github.com/kdrag0n/proton-clang Proton
+git clone --depth=1 https://github.com/AnGgIt86/arm64-gcc NFS-Toolchain
+git clone --depth=1 https://github.com/AnGgIt86/arm64-gcc NFS-Toolchain2
+git clone --depth=1 https://github.com/AnGgIt86/NeedForSpeed-Clang NFS-Clang
 
-wget https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/rosy/normal/GCC.sh
 wget https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/rosy/normal/NFS.sh
-wget https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/rosy/normal/Proton.sh
+wget https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/rosy/normal/NFS-clang.sh
 wget https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/rosy/normal/rm.sh
 
 curl -s -X POST "$BOT_MSG_URL2/sendSticker" \
 -d sticker="CAACAgUAAx0CXjGT1gACAeRg69dV3PYH_z8EZQnV9D9MubhVCwAClAAD7OCaHulbTgv4Q5nsIAQ" \
 -d chat_id="$TG_CHAT_ID"
         
-tg_post_msg "<b>NFSKernel-normal-(rosy):</b><code>Started build witch NeedForSpeed GCC</code>"
-echo "Started build witch NeedForSpeed GCC"
-chmod +x GCC.sh
-bash GCC.sh
-echo "membersihkan config sebelumnya"
-bash rm.sh
-tg_post_msg "<b>NFSKernel-normal-(rosy):</b><code>Started build witch NeedForSpeed Clang</code>"
-echo "Started build witch NeedForSpeed Clang"
+tg_post_msg "<b>$KERNEL_NAME-(rosy):</b><code>Started build witch NFS GCC</code>"
+echo "started build witch NFS GCC"
 chmod +x NFS.sh
 bash NFS.sh
 echo "membersihkan config sebelumnya"
 bash rm.sh
-tg_post_msg "<b>NFSKernel-normal-(rosy):</b><code>Started build witch Proton Clang</code>"
-echo "started build witch Proton Clang"
-chmod +x Proton.sh
-bash Proton.sh
+tg_post_msg "<b>$KERNEL_NAME-(rosy):</b><code>Started build witch NeedForSpeed Clang</code>"
+echo "Started build witch NeedForSpeed Clang"
+chmod +x NFS-clang.sh
+bash NFS-clang.sh
 tg_post_msg "<b>NFSKernel-normal-(rosy):</b><code>Building completed...</code>"
 curl -s -X POST "$BOT_MSG_URL2/sendSticker" \
 -d sticker="CAACAgIAAx0CXjGT1gACAeVg69gXIw-a6h1nvmmaub51tQQwCgACLQMAAsbMYwIquW4nbs0crSAE" \
