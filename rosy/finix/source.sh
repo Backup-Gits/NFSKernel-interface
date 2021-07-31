@@ -4,8 +4,8 @@ export USE_CCACHE=1
 export CCACHE_DIR="$HOME/.ccache"
 export TZ=Asia/Jakarta
 export KERNEL_NAME=Finix-Kernel
-export KERNEL_SOURCE=https://github.com/AnGgIt88/kernel_msm-4.9
-export KERNEL_BRANCH=upstream
+export KERNEL_SOURCE=https://github.com/AnGgIt88/Finix_kernel-4.9-rosy
+export KERNEL_BRANCH=a11/master
 export DEVICE_CODENAME=rosy
 export DEVICE_DEFCONFIG=rosy-perf_defconfig
 export ANYKERNEL=https://github.com/AnGgIt86/AnyKernel3
@@ -15,8 +15,8 @@ export BUILD_USER=xiaomi
 export BUILD_HOST=nfs-projects
 export BOT_MSG_URL="https://api.telegram.org/bot$TG_TOKEN/sendMessage"
 export BOT_MSG_URL2="https://api.telegram.org/bot$TG_TOKEN"
-git config --global user.email "jarbull86@gmail.com"
-git config --global user.name "AnGgIt86"
+git config --global user.email "jarbull87@gmail.com"
+git config --global user.name "AnGgIt88"
 
 tg_post_msg() {
   curl -s -X POST "$BOT_MSG_URL" -d chat_id="$TG_CHAT_ID" \
