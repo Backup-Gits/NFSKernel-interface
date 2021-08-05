@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+export KERNEL_NAME=Finix-Kernel-GCC
+export CONFIG_CC_STACKPROTECTOR_STRONG=y
+
 # Main Declaration
 KERNEL_ROOTDIR=$(pwd)/$DEVICE_CODENAME # IMPORTANT ! Fill with your kernel source root directory.
 DEVICE_DEFCONFIG=$DEVICE_DEFCONFIG # IMPORTANT ! Declare your kernel source defconfig file here.

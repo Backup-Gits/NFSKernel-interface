@@ -3,7 +3,6 @@
 export USE_CCACHE=1
 export CCACHE_DIR="$HOME/.ccache"
 export TZ=Asia/Jakarta
-export KERNEL_NAME=Finix-Kernel
 export KERNEL_SOURCE=https://github.com/AnGgIt88/Finix_kernel-4.9-rosy
 export KERNEL_BRANCH=a11/master
 export DEVICE_CODENAME=rosy
@@ -50,7 +49,7 @@ tg_post_msg "<b>NFSKernel-normal-(rosy):</b><code>Started build witch NeedForSpe
 echo "Started build witch NeedForSpeed Clang"
 chmod +x NFS-clang.sh
 bash NFS-clang.sh
-tg_post_msg "<b>NFSKernel-normal-(rosy):</b><code>Building completed...</code>"
+tg_post_msg "<b>Finix-kernel-(rosy):</b><code>Building completed...</code>"
 curl -s -X POST "$BOT_MSG_URL2/sendSticker" \
 -d sticker="CAACAgIAAx0CXjGT1gACAeVg69gXIw-a6h1nvmmaub51tQQwCgACLQMAAsbMYwIquW4nbs0crSAE" \
 -d chat_id="$TG_CHAT_ID"
