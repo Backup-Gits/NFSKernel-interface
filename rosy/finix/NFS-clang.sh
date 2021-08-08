@@ -56,7 +56,6 @@ tg_post_msg "<b>$KERNEL_NAME-(rosy)</b>%0ABuilder Name : <code>${KBUILD_BUILD_US
 
 # Compile
 compile(){
-tg_post_msg "<b>$KERNEL_NAME-(rosy):</b><code>Membangun Kernel sedang di mulai, Sabar ya bro. Gak lama kok..</code>"
 cd ${KERNEL_ROOTDIR}
 make -j$(nproc) O=out ARCH=arm64 ${DEVICE_DEFCONFIG}
 make -j$(nproc) ARCH=arm64 O=out \
