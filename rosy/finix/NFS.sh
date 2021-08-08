@@ -59,6 +59,7 @@ compile(){
 cd ${KERNEL_ROOTDIR}
 make -j$(nproc) O=out ARCH=arm64 ${DEVICE_DEFCONFIG}
 make -j$(nproc) ARCH=arm64 O=out \
+    CC=${GCC_ROOTDIR}/bin/aarch64-elf-gcc \
     AR=${GCC_ROOTDIR}/bin/llvm-ar \
   	NM=${GCC_ROOTDIR}/bin/llvm-nm \
   	OBJCOPY=${GCC_ROOTDIR}/bin/llvm-objcopy \
